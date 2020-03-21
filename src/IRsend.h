@@ -442,6 +442,10 @@ class IRsend {
   void sendLasertag(uint64_t data, uint16_t nbits = kLasertagBits,
                     uint16_t repeat = kLasertagMinRepeat);
 #endif
+#if SEND_MANCHESTER
+    void sendManchester(uint64_t data, uint16_t nbits = kManchesterBits,
+                      uint16_t repeat = kManchesterMinRepeat);
+#endif
 #if SEND_CARRIER_AC
   void sendCarrierAC(uint64_t data, uint16_t nbits = kCarrierAcBits,
                      uint16_t repeat = kCarrierAcMinRepeat);

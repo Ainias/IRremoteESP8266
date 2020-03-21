@@ -176,6 +176,7 @@ decodeLegoPf	KEYWORD2
 decodeLutron	KEYWORD2
 decodeMWM	KEYWORD2
 decodeMagiQuest	KEYWORD2
+decodeManchester
 decodeMidea	KEYWORD2
 decodeMitsubishi	KEYWORD2
 decodeMitsubishi112	KEYWORD2
@@ -434,6 +435,7 @@ sendLegoPf	KEYWORD2
 sendLutron	KEYWORD2
 sendMWM	KEYWORD2
 sendMagiQuest	KEYWORD2
+sendManchester	KEYWORD2
 sendMidea	KEYWORD2
 sendMitsubishi	KEYWORD2
 sendMitsubishi112	KEYWORD2

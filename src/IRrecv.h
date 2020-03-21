@@ -281,7 +281,7 @@ class IRrecv {
                              const uint16_t nbits = kMitsubishiHeavy152Bits,
                              const bool strict = true);
 #endif
-#if (DECODE_RC5 || DECODE_R6 || DECODE_LASERTAG || DECODE_MWM)
+#if (DECODE_RC5 || DECODE_R6 || DECODE_LASERTAG || DECODE_MWM || DECODE_MANCHESTER)
   int16_t getRClevel(decode_results *results, uint16_t *offset, uint16_t *used,
                      uint16_t bitTime, uint8_t tolerance = kUseDefTol,
                      int16_t excess = kMarkExcess, uint16_t delta = 0,
@@ -447,6 +447,11 @@ class IRrecv {
   bool decodeLasertag(decode_results *results, uint16_t offset = kStartOffset,
                       const uint16_t nbits = kLasertagBits,
                       const bool strict = true);
+#endif
+#if DECODE_MANCHESTER
+    bool decodeManchester(decode_results *results, uint16_t offset = kStartOffset,
+                        const uint16_t nbits = kManchesterBits,
+                        const bool strict = true);
 #endif
 #if DECODE_CARRIER_AC
   bool decodeCarrierAC(decode_results *results, uint16_t offset = kStartOffset,

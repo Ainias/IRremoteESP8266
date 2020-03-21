@@ -152,6 +152,13 @@
 #define SEND_JVC               _IR_ENABLE_DEFAULT_
 #endif  // SEND_JVC
 
+#ifndef DECODE_MANCHESTER
+#define DECODE_MANCHESTER      _IR_ENABLE_DEFAULT_
+#endif  // DECODE_MANCHESTER
+#ifndef SEND_MANCHESTER
+#define SEND_MANCHESTER        _IR_ENABLE_DEFAULT_
+#endif  // SEND_MANCHESTER
+
 #ifndef DECODE_SAMSUNG
 #define DECODE_SAMSUNG         _IR_ENABLE_DEFAULT_
 #endif  // DECODE_SAMSUNG
@@ -703,8 +710,9 @@ enum decode_type_t {
   SONY_38K,
   EPSON,  // 75
   SYMPHONY,
+  MANCHESTER,
   // Add new entries before this one, and update it to point to the last entry.
-  kLastDecodeType = SYMPHONY,
+  kLastDecodeType = MANCHESTER,
 };
 
 // Message lengths & required repeat values
@@ -799,6 +807,8 @@ const uint16_t kLg32Bits = 32;
 const uint16_t kLgDefaultRepeat = kNoRepeat;
 const uint16_t kLutronBits = 35;
 const uint16_t kMagiquestBits = 56;
+const uint16_t kManchesterBits = 64;
+const uint16_t kManchesterMinRepeat = kNoRepeat;
 const uint16_t kMideaBits = 48;
 const uint16_t kMideaMinRepeat = kNoRepeat;
 const uint16_t kMitsubishiBits = 16;

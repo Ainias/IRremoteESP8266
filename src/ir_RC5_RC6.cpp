@@ -270,7 +270,7 @@ void IRsend::sendRC6(uint64_t data, uint16_t nbits, uint16_t repeat) {
 }
 #endif  // SEND_RC6
 
-#if (DECODE_RC5 || DECODE_RC6 || DECODE_LASERTAG)
+#if (DECODE_RC5 || DECODE_RC6 || DECODE_LASERTAG || DECODE_MANCHESTER)
 // Gets one undecoded level at a time from the raw buffer.
 // The RC5/6 decoding is easier if the data is broken into time intervals.
 // E.g. if the buffer has MARK for 2 time intervals and SPACE for 1,

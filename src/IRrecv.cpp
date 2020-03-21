@@ -626,6 +626,10 @@ bool IRrecv::decode(decode_results *results, irparams_t *save,
     DPRINTLN("Attempting Lasertag decode");
     if (decodeLasertag(results, offset)) return true;
 #endif
+#if DECODE_MANCHESTER
+      DPRINTLN("Attempting Manchester decode");
+      if (decodeManchester(results, offset)) return true;
+#endif
 #if DECODE_GREE
     // Gree based-devices use a similar code to Kelvinator ones, to avoid false
     // matches this needs to happen after decodeKelvinator().
